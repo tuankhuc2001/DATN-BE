@@ -4,10 +4,8 @@ package notehospital.dto.response;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import notehospital.entity.Account;
 import notehospital.entity.Prescription;
-import notehospital.entity.Service;
-import notehospital.enums.OrderStatus;
+import notehospital.enums.ScheduleStatus;
 
 import java.util.Date;
 import java.util.Set;
@@ -16,11 +14,14 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class OrdertoPrescriptionResponse {
+public class ScheduleResponse {
     long id;
     Date createdAt;
     String note;
     Date testDate;
+    ScheduleStatus status;
     AccountResponseDTO doctor;
+    AccountResponseDTO patient;
     Prescription prescription;
+    Set<ResultResponse> results;
 }

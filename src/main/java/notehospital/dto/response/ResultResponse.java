@@ -1,7 +1,6 @@
 package notehospital.dto.response;
 
 import lombok.*;
-import notehospital.entity.Service;
 import notehospital.enums.ResultLevel;
 
 @Data
@@ -15,6 +14,6 @@ public class ResultResponse {
     String comment;
     String value;
     ResultLevel level;
-    private OrdertoPrescriptionResponse ordertoPrescription;
+    private ScheduletoPrescriptionResponse scheduletoPrescription;
 
 }

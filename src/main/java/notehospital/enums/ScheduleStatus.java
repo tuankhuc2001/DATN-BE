@@ -1,6 +1,6 @@
 package notehospital.enums;
 
-public enum OrderStatus {
+public enum ScheduleStatus {
     CONFIRM,
     IN_PROCESS,
     REJECT,

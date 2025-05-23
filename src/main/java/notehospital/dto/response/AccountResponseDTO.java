@@ -5,7 +5,6 @@ import javax.persistence.Enumerated;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import notehospital.entity.Service;
 import notehospital.enums.AccountStatus;
 import notehospital.enums.AccountType;
 import notehospital.enums.Gender;
@@ -33,6 +32,6 @@ public class AccountResponseDTO {
 
     private ServiceDTO service;
 
-    Set<OrderResponse> orderResponses;
+    Set<ScheduleResponse> scheduleResponses;
 
 }

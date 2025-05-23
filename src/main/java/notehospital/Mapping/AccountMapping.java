@@ -2,12 +2,7 @@ package notehospital.Mapping;
 
 import notehospital.dto.response.*;
 import notehospital.entity.Account;
-import notehospital.entity.Order;
-import notehospital.entity.Result;
 import notehospital.enums.AccountType;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class AccountMapping {
     public static AccountResponseDTO accountResponseDTO(Account account){

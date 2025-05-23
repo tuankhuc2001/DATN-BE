@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import notehospital.entity.Order;
-import notehospital.entity.PrescriptionItem;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -25,9 +23,9 @@ public class Prescription {
     private long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "schedule_id")
     @JsonIgnore
-    Order order;
+    Schedule schedule;
 
     @OneToMany(mappedBy = "prescription",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Set<PrescriptionItem> prescriptionItems = new HashSet<>();

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class OrderRequest {
+public class ScheduleRequest {
     Date testDate;
     long doctorId;
     long[] services;

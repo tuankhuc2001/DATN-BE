@@ -2,14 +2,11 @@ package notehospital.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
-import javax.persistence.criteria.Fetch;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import notehospital.enums.OrderStatus;
+import notehospital.enums.ScheduleStatus;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
 
@@ -18,9 +15,9 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "orders")
+@Table(name = "schedule")
 @Component
-public class Order {
+public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -30,7 +27,7 @@ public class Order {
     private Date testDate;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status = OrderStatus.CONFIRM;
+    private ScheduleStatus status = ScheduleStatus.CONFIRM;
 
     @ManyToOne()
     @JoinColumn(name = "account_id")
@@ -46,7 +43,7 @@ public class Order {
     private Prescription prescription;
 
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Result> results;
 

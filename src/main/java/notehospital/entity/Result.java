@@ -1,7 +1,6 @@
 package notehospital.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,9 +28,9 @@ public class Result {
     private ResultLevel level;
 
     @ManyToOne()
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "schedule_id")
     @JsonIgnore
-    Order order;
+    Schedule schedule;
 
     @ManyToOne()
     @JsonIgnore
