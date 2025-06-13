@@ -17,7 +17,7 @@ import java.util.Set;
 @Setter
 @Table(name = "schedule")
 @Component
-public class Schedule {
+public class  Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
